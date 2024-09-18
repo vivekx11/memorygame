@@ -76,8 +76,8 @@
 
         /* Medium Mode: 5x6 Grid */
         .game-board.medium-mode {
-            grid-template-columns: repeat(5, 70px);
-            grid-template-rows: repeat(6, 70px);
+            grid-template-columns: repeat(6, 70px);
+            grid-template-rows: repeat(5, 70px);
         }
 
         /* Hard Mode: 6x6 Grid */
@@ -227,12 +227,17 @@
         .overlay.active {
             display: block;
         }
+        /* Footer Styling */
+        
     </style>
 </head>
 <body>
     <div class="container" id="front-page">
         <u><h1>WELLCOME TO MEMORY GAME</h1></u>
         <button id="start-button">START</button>
+        <footer>
+            <p>© 2024 Memory Game. All rights reserved.</p>
+        </footer>
     </div>
 
     <div class="container hidden" id="mode-page">
@@ -241,6 +246,9 @@
         <button class="mode-button" data-mode="medium">MEDIUM</button>
         <button class="mode-button" data-mode="hard">HARD</button><br>
         <button id="back-to-front-page">BACK</button>
+        <footer>
+            <p>© 2024 MemoryGame. All rights reserved.</p>
+        </footer>
     </div>
 
     <div class="container hidden" id="game-page">
@@ -249,7 +257,12 @@
         <div id="score">Score: <span id="current-score">0</span></div>
         <div class="game-board" id="game-board"></div>
         <button id="back-to-mode-page">BACK</button>
-    </div>
+        <footer>
+            <p>© 2024 MemoryGame. All rights reserved.</p>
+        </footer>
+    </div><br>
+    
+
 
     <!-- Modal for Victory, Failure -->
     <div class="modal" id="modal">
@@ -257,7 +270,7 @@
         <button id="modal-close">Close</button>
     </div>
     <div class="overlay" id="overlay"></div>
-
+    
     <script>
         let firstCard, secondCard;
         let lockBoard = false;
@@ -282,7 +295,14 @@
             'php-logo-svgrepo-com.svg',
             'python-svgrepo-com.svg',
             'react-logo-svgrepo-com.svg',
-            'visual-studio-code-logo-svgrepo-com.svg'
+            'visual-studio-code-logo-svgrepo-com.svg',
+            'google-icon-logo-svgrepo-com.svg',
+            'gta-grand-theft-auto-logo-svgrepo-com.svg',
+            'pubg-1-logo-svgrepo-com.svg',
+            'google-play-game-logo-svgrepo-com.svg',
+            'youtube-icon-logo-svgrepo-com.svg',
+            'chrome-7-logo-svgrepo-com.svg'
+
         ];
 
         // Show Mode Page
@@ -449,9 +469,9 @@
                 case 'easy':
                     return 20;
                 case 'medium':
-                    return 34;
+                    return 30;
                 case 'hard':
-                    return 40;
+                    return 36;
                 default:
                     return 0;
             }
